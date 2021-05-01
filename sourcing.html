@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Wavelens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wavelens, making AR with AI.">
+    <meta name="author" content="Wavelens">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <script src="https://kit.fontawesome.com/d7b80a780b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Content START -->
+    <!doctype html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Wavelens</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Wavelens, making AR with AI.">
+        <meta name="author" content="Wavelens">
+
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+        <script src="https://kit.fontawesome.com/d7b80a780b.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+
+    </head>
+
+    <body onresize="updateThingy()">
+        <!-- Content START -->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close2" onclick='modal.style.display = "none";'>&times;</span>
+                <h2>Resume</h2>
+                <p>We detected that there is an unfinished session. Do you want to contiune working on it?</p>
+                <button class="bubbly-button" onclick="restoreSession()">Resume</button>
+            </div>
+
+        </div>
+        <!-- Header image START -->
+        <div class="container demo" id='home'>
+            <div class="content">
+                <div id="large-header" class="large-header">
+                    <div class="header-background-img"></div>
+                    <canvas id="demo-canvas"></canvas>
+                    <h1 class="main-title"><img src="res/WavelensAnimtedV2.gif" class="wavelensLogoMain"> <br>
+                        Crowdsourcing platform</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Header image END -->
+        <!-- Header START -->
+        <div class="header">
+            <img src="res/Logo-WAVELENS.png" class="headerIcon" alt="Wavelens Logo">
+            <div class="header-middle">
+                <a href="/">Home</a>
+                <a href="/buy.html">Buy</a>
+                <a href="/sourcing.html">Crowdsourcing</a>
+                <!-- <a class="scrollLink" href="#textBlock1">Text Block 1</a> -->
+                <!-- <a class="scrollLink" href="#textBlock2">Text Block 2</a> -->
+                <!-- <a class="scrollLink" href="#textBlock3">Text Block 3</a> -->
+            </div>
+        </div>
+        <span class="mobileBurger" onclick="openNav()">&#9776;</span>
+
+        <!-- Mobile HEADER -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a>
+            <a href="/buy.html">Buy</a>
+            <a href="/sourcing.html">Crowdsourcing</a>
+            <!-- <a class="scrollLink" href="#textBlock1">Text Block 1</a> -->
+            <!-- <a class="scrollLink" href="#textBlock2">Text Block 2</a> -->
+            <!-- <a class="scrollLink" href="#textBlock3">Text Block 3</a> -->
+        </div>
+        <!-- Header END -->
+        <div class="trigger2"></div>
+        <div class="panel guideHeight">
+            <div id="guide_license">
+                <h1>Crowdsourcing platform</h1>
+                Welcome to the Wavelens Crowdsourcing platform. Thanks for being interested in contributing to our
+                program.
+                For legal reasons, we have to inform you that this site collects data.<br> The collected data includes
+                the
+                webcam footage and your IP address. We also use cookies. The recorded footage will be kept indefinitely.
+                By clicking "I
+                accept"
+                you agree to the privacy policy and agree that the video recordings you create belong to us.<br>
+                <button class="bubbly-button" onclick="page=1; updatePage(); changed = true;">I agree</button>
+            </div>
+            <div id="guide_webcam">
+                <h1>Crowdsourcing platform</h1>
+                Thank you for still being interested. Before you start there are a few things you need to remember.
+                <h3>Camera placement</h3>
+                You don't need a high-quality camera. The camera placement is very easy. Place the camera like it would
+                be on your head. Take the image below as an example.<br><br>
+                <img src="https://via.placeholder.com/500x300" alt="Tutorial image" class="webcamPlacementImage"><br>
+                <button class="bubbly-button" onclick="page=2; updatePage(); changed = true;">Next</button>
+
+            </div>
+            <div id="webcam_preview">
+
+                <h1>Crowdsourcing platform</h1>
+                <p id="explainText">
+                    Okay, you're ready to start. Let's check your webcam. First of all you need to allow us to use your
+                    webcam. Just press "Start" whenever you are. If you're set up press "Next"
+                </p>
+                <button class="bubbly-button-red animate" onclick="">Rec</button>
+                <br>
+                <div class="recordrtc">
+                    <select class="recording-media" style="display: none;">
+                        <option value="record-video">Video</option>
+                    </select>
+                    <select class="media-container-format" style="display: none;">
+                        <option>WebM</option>
+                    </select>
+
+                    <button class="bubbly-button">Start</button>
+
+
+                    <div style="text-align: center; display: none;">
+                        <button id="save-to-disk">Save To Disk</button>
+                        <button id="open-new-tab">Open New Tab</button>
+                        <button id="upload-to-server">Upload To Server</button>
+                    </div>
+
+                    <br>
+                    <div class="moveSide">
+                        <img src="https://via.placeholder.com/500x300.png?text=Gesture+1" alt="Gesture"
+                            id="gestureImage">
+                        <video playsinline autoplay muted=false volume=1 style="height: 20em;"></video>
+
+                    </div>
+                </div>
+                <br>
+
+                <button class="bubbly-button" id="explainP1" onclick="page=3; updatePage(); changed = true;">Next</button>
+
+            </div>
+        </div>
+
+        <!-- Content END -->
+        <footer class="fixed_footer">
+            <div class="footer_content">
+                <center>
+                    <h3>Wavelens &copy; 2020</h3>
+                </center>
+                <div class="footer-text-left">Stuff nobody will read nor care about. But it needs to exist. If you
+                    forget it you will be sued out of existance. I hate it. I know DoNt HaRdCoDe StYlE iNto HTML. Shut
+                    up. I
+                    need
+                    links for shit down here. You can't bother me to use Lorem Ipsum here. Fuck it. I need to check
+                    all
+                    the
+                    copyright stuff. </div>
+                <div class="footer-text-right">Well, rants are cool.. right? Right? I know. We dont want you to talk
+                    to
+                    us,
+                    so I wont bother to put any social shit down here. Forget it. And why lorem ipsum. When you can
+                    be
+                    creativ. Yaaaay! Okay, yeah I changed it. No more hardcoded style. And yes I dont care about the
+                    deprecation of the center tag. I hope Dennis wont kill me.</div>
+            </div>
+        </footer>
+    </body>
+    <!-- Scripts START -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://www.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
+    <script src="https://www.webrtc-experiment.com/getScreenId.js"></script>
+    <script src="https://www.webrtc-experiment.com/DetectRTC.js"> </script>
+    <!-- for Edige/FF/Chrome/Opera/etc. getUserMedia support -->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src='js/particleEffect.js'></script>
+    <script src='js/TweenLite.min.js'></script>
+    <script src='js/webcam.js'></script>
+    <script>
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }</script>
+    <script>
+
+        var amountOfGestures = 12;
+
+        var page = 0;
+        var gest = 1;
+        var changed = false;
+        var modal = document.getElementById("myModal");
+        if (Cookies.get('page') != "") {
+            modal.style.display = "block";
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+        var moved = false;
+
+        /* Page animations */
+        $(".moveSide").each(function () {
+            var myHeader = $(this).find("video");
+            var myImg = $(this).find("img");
+            var tl = new TimelineLite();
+            tl
+                .to(myHeader, 0.5, { x: 200 })
+                .to(myImg, 0.5, { x: 300, opacity: 1 })
+                .reversed(true);//this reverses the playhead at a time of 0. when you "un-reverse" on click it will play forward
+            this.animation = tl;
+        })
+
+        //un-reverse the animation of the card that is clicked on
+        $(".moveSide").click(function () {
+            if (moved == false) {
+                moved = true;
+                this.animation.reversed(!this.animation.reversed());
+            }
+        })
+        
+        gsap.to(".headerIcon", {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".trigger2",
+                start: "top 500px",
+                end: "top 150px",
+                scrub: true,
+                markers: false,
+                id: "scrub"
+            }
+        });
+        /* Page animations END */
+
+        function restoreSession() {
+            modal.style.display = "none";
+            page = Cookies.get("page");
+            if (Cookies.get("gesture") != "") {
+                if (Cookies.get("gesture") >= 1 && Cookies.get("gesture") <= amountOfGestures) {
+                    gest = Cookies.get("gesture");
+                }
+
+            }
+            changed = true;
+            updatePage();
+        }
+
+
+        function updatePage() {
+            setInterval(function () {
+                Cookies.set('page', page, { expires: 1 });
+                if (changed) {
+                    if (page == 1) {
+                        document.getElementById("guide_license").style.display = "none"
+                        document.getElementById("guide_webcam").style.display = "block"
+                    }
+                    if (page == 2) {
+                        document.getElementById("guide_license").style.display = "none"
+                        document.getElementById("guide_webcam").style.display = "none"
+                        document.getElementById("webcam_preview").style.display = "block"
+                    }
+                    if (page == 3) {
+                        document.getElementById("guide_license").style.display = "none"
+                        document.getElementById("guide_webcam").style.display = "none"
+                        document.getElementById("webcam_preview").style.display = "block"
+                        document.getElementById("explainText").innerHTML = "Everything is set up. Now we will record the gestures. There are twelve of them. " + gest + "/" + amountOfGestures;
+                        fileName = "https://via.placeholder.com/500x300.png?text=Gesture+" + gest
+                        document.getElementById("gestureImage").src = fileName;
+                        document.getElementsByClassName("moveSide")[0].click()
+                        Cookies.set('gesture', gest, { expires: 1 });
+                    }
+                    changed = false;
+                }
+
+            }, 400)
+        }
+
+        function updateThingy() {  // Updates Header interactive thing @ window resize
+            initHeader();
+            initAnimation();
+        }
+
+
+
+        var animateButton = function (e) {
+
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove('animate');
+
+            e.target.classList.add('animate');
+            setTimeout(function () {
+                e.target.classList.remove('animate');
+            }, 700);
+        };
+
+        var animateButtonRed = function (e) {
+
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove('animate-red');
+
+            e.target.classList.add('animate-red');
+            setTimeout(function () {
+                e.target.classList.remove('animate-red');
+            }, 700);
+        };
+
+        var bubblyButtons = document.getElementsByClassName("bubbly-button");
+        var bubblyButtonsred = document.getElementsByClassName("bubbly-button-red");
+
+        for (var i = 0; i < bubblyButtonsred.length; i++) {
+            bubblyButtonsred[i].addEventListener('click', animateButtonRed, false);
+        }
+
+        for (var i = 0; i < bubblyButtons.length; i++) {
+            bubblyButtons[i].addEventListener('click', animateButton, false);
+        }
+
+
+    </script>
+    <!-- Scripts END -->
+    </html>

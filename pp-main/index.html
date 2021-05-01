@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Wavelens - AR glasses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wavelens, making AR with AI.">
+    <meta name="author" content="Wavelens">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <script src="https://kit.fontawesome.com/d7b80a780b.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+
+	<!-- Google Tag Manager -->
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WJKJ869');</script> -->
+    <!-- End Google Tag Manager -->
+    
+    <!-- HTML Meta Tags -->
+    <meta name="description" content=" Smartglasses are considered the next big breakthrough for wearables that will filter into our daily lives. Putting useful connected features in front of our... ">
+    <meta name="keywords" content="AR, glasses">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="AR glasses 2021 by Wavelens">
+    <meta itemprop="description" content=" Smartglasses are considered the next big breakthrough for wearables that will filter into our daily lives. Putting useful connected features in front of our... ">
+    <meta itemprop="image" content="https://wavelens.io/res/preDimZS.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://wavelens.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AR glasses 2021 by Wavelens">
+    <meta property="og:description" content=" Smartglasses are considered the next big breakthrough for wearables that will filter into our daily lives. Putting useful connected features in front of our... ">
+    <meta property="og:image" content="https://wavelens.io/res/preDimZS.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AR glasses 2021 by Wavelens">
+    <meta name="twitter:description" content=" Smartglasses are considered the next big breakthrough for wearables that will filter into our daily lives. Putting useful connected features in front of our... ">
+    <meta name="twitter:image" content="https://wavelens.io/res/preDimZS.png">
+
+    <!-- Meta Tags Generated via http://heymeta.com -->
+</head>
+
+<body onresize="updateThingy()">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJKJ869"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    <!-- Content START -->
+
+    <!-- Header image START -->
+    <div class="container demo" id='home'>
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <div class="header-background-img"></div>
+                <canvas id="demo-canvas"></canvas>
+                <h1 class="main-title"><img src="res/WavelensAnimtedV2.gif" class="wavelensLogoMain"></h1>
+            </div>
+        </div>
+    </div>
+    <!-- Header image END -->
+
+    <!-- Header START -->
+    <div class="header">
+        <img src="res/Logo-WAVELENS.png" class="headerIcon" alt="Wavelens Logo">
+        <div class="header-middle">
+            <a class="scrollLink" href="#home">Home</a>
+            <a class="" href="faq/">FAQ</a>
+            <!-- <a href="/buy.html">Buy</a> -->
+            <!-- <a href="/sourcing.html">Crowdsourcing</a> -->
+        </div>
+    </div>
+    <span class="mobileBurger" onclick="openNav()">&#9776;</span> 
+
+    <!-- Mobile HEADER -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="scrollLink" href="#home">Home</a>
+        <a class="" href="faq/">FAQ</a>
+        <!-- <a href="/buy.html">Buy</a> -->
+        <!-- <a href="/sourcing.html">Crowdsourcing</a> -->
+    </div>
+    <!-- Header END -->
+    
+    <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+<!-- 
+    <div class="showOnMobile">
+        <div class="center">
+            <div class="property-card" id="property-card1">
+                <div class="property-description">
+                    <h5 class="card-h5">Green</h5>
+                    <p class="card-p">Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum
+                        doth be hard.</p>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <br class="mobile-break">
+            <div class="property-card" id="property-card2">
+                <div class="property-description">
+                    <h5 class="card-h5">Safe</h5>
+                    <p class="card-p">Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum
+                        doth be hard.</p>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <br class="mobile-break">
+            <div class="property-card" id="property-card3">
+                <div class="property-description">
+                    <h5 class="card-h5">LOOK</h5>
+                    <p class="card-p">Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum
+                        doth be hard.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="showOnDesktop">
+        <div class="center">
+            <div class="property-card" id="property-card1">
+                <div class="property-description">
+                    <h5 class="card-h5">Green</h5>
+                    <p class="card-p">Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum
+                        doth be hard.</p>
+                </div>
+            </div>
+        
+            <div class="property-card" id="property-card2">
+                <div class="property-description">
+                    <h5 class="card-h5">Safe</h5>
+                    <p class="card-p">Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum
+                        doth be hard.</p>
+                </div>
+            </div>
+        
+            <div class="property-card" id="property-card3">
+                <div class="property-description">
+                    <h5 class="card-h5">LOOK</h5>
+                    <p class="card-p">Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum
+                        doth be hard.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> -->
+    <div class="trigger2"></div>
+        <div class="marker3 reveal preDimZS" id="textBlock1">
+            <br class="mobile-break">
+            <div class="panel-right anim1">
+                <h1>Wavelens DIMENSION</h1>
+                <h3>An lightweight, beautiful and fast smartglasses.</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="trigger3"></div>
+        <div class="polyHand" id="textBlock2">
+            <br class="mobile-break">
+            <div class="panel-left anim3">
+                <h1>Always have your hands free.</h1>
+                <h3>Use our AI based Handtracking. So you have always your hands free to work.</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="trigger4"></div>
+        <div class="marker3 reveal display" id="textBlock3">
+            <br class="mobile-break">
+            <div class="panel-right anim1">
+                <h1>Immersive view</h1>
+                <h3>Experience 77° field of view with an FullHD RGB display and the most advanced technologies.</h3>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- <div class="panel marker2">
+        <h1>Daily usage</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Enim diam vulputate ut
+        pharetra sit amet aliquam. Mattis ullamcorper velit sed ullamcorper. Augue mauris augue neque gravida in
+        fermentum et. Lobortis mattis aliquam faucibus purus in massa tempor. Vitae proin sagittis nisl rhoncus mattis
+        rhoncus urna. Vel turpis nunc eget lorem dolor sed viverra ipsum. Molestie nunc non blandit massa enim nec. Sit
+        amet dictum sit amet justo donec enim diam. Pellentesque sit amet porttitor eget. Viverra nam libero justo
+        laoreet sit. Sapien pellentesque habitant morbi tristique senectus et netus. Nibh sit amet commodo nulla
+        facilisi nullam vehicula ipsum. In vitae turpis massa sed. Faucibus in ornare quam viverra orci sagittis. Ipsum
+        dolor sit amet consectetur adipiscing elit pellentesque.
+    </div> -->
+    <img src="res/What-is-landscape-photography.jpg" class="banner" id="textBlock2">
+    <div class="panel marker1" id="textBlock3">
+        <h1>AR for everyone</h1>
+        Augmented reality (AR) is one of the biggest technology trends right now, and it’s only going to get bigger as 
+        AR ready smartphones and other devices become more accessible around the world. AR let us see the real-life 
+        environment right in front of us—trees swaying in the park, dogs chasing balls, kids playing soccer—with a digital 
+        augmentation overlaid on it. For example,  a pterodactyl might be seen landing in the trees, the dogs could be 
+        mingling with their cartoon counterparts, and the kids could be seen kicking past an alien spacecraft on their 
+        way to score a goal.
+        With advances in AR technology, these examples are not that different from what might already be available for 
+        your smartphone. Augmented reality is, in fact, readily available and being used in a myriad of ways including as 
+        Snapchat lenses, in apps that help you find your car in a crowded parking lot, and in variety of shopping apps that 
+        let you try on clothes without even leaving home.
+    </div>
+    <!-- Content END -->
+
+    <footer class="fixed_footer">
+        <div class="footer_content">
+            <center>
+                <h3>Wavelens &copy; 2020-2021</h3>
+                <a href="https://twitter.com/realwavelens" class="socialLink"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/realwavelens/" class="socialLink"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.reddit.com/user/wavelens" class="socialLink"><i class="fab fa-reddit-alien"></i></a>
+            </center>
+            <div class="footer-text-left"><a class="footer-text-link" href="legal/privacy.html">Privacy</a></div>
+            <div class="footer-text-right"><!--Well, rants are cool.. right? Right? I know. We dont want you to talk to us,
+                so I wont bother to put any social sh** down here. Forget it. And why lorem ipsum. When you can be
+                creativ. Yaaaay! Okay, yeah I changed it. No more hardcoded style. And yes I dont care about the
+                deprecation of the center tag. I hope Dennis wont kill me. EDIT: I added social stuff. Are you happy now?
+                What do you know about the cake? Probably nothing right?--></div>
+        </div>
+    </footer>
+</body>
+    <!-- Scripts START -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src='js/particleEffect.js'></script>
+    <script src='js/TweenLite.min.js'></script>
+    <script src="/js/animation.js"></script>
+    
+    <script>
+        // Functions for the sidebar menu
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+       
+        /** Smooth scrolling for Header bar **/
+        $(document).ready(function () {
+            $("a.scrollLink").click(function (event) {
+                event.preventDefault();
+                closeNav();
+                $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+            });
+        });
+
+        function updateThingy() {  // Updates Header interactive thing @ window resize
+            initHeader();
+            initAnimation();
+        }
+    </script>
+    <!-- Scripts END -->
+</html>
